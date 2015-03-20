@@ -209,6 +209,8 @@ Para realizar o *build* da nossa aplicação *front-end* utilizamos diversos pac
 
 ---
 
-Desenvolver sistemas profissionais não é tarefa fácil. Poder contar com uma comunidade open-source bastante ativa facilita muito a vida dos desenvolvedores, já que existem diversas ferramentas para realizar tarefas comuns. A comunidade open-source que existe ao redor de JavaScript e, especificamente, node, é bastante grande muito dinâmica. Com isso, é necessário conhecer diversas ferramentas e estar sempre se atualizando.
+## Quais ferramentas você utiliza?
+
+Desenvolver sistemas profissionais não é tarefa fácil. Poder contar com uma comunidade open-source muito ativa facilita muito a vida dos desenvolvedores, já que existem diversas ferramentas para realizar tarefas comuns. A comunidade open-source que existe ao redor de JavaScript e, especificamente, node, é bastante grande e muito dinâmica. Com isso, é necessário conhecer diversas ferramentas e se atualizar sempre.
 
 O que você achou do artigo? Alguma ferramenta que você utiliza não está na lista? Deixe seu comentário!
