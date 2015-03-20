@@ -208,3 +208,7 @@ Para realizar o *build* da nossa aplicação *front-end* utilizamos diversos pac
 * **[grunt-wiredep](https://github.com/gruntjs/grunt-wiredep)**: Injeta as dependências instaladas com bower automaticamente no HTML.
 
 ---
+
+Desenvolver sistemas profissionais não é tarefa fácil. Poder contar com uma comunidade open-source bastante ativa facilita muito a vida dos desenvolvedores, já que existem diversas ferramentas para realizar tarefas comuns. A comunidade open-source que existe ao redor de JavaScript e, especificamente, node, é bastante grande muito dinâmica. Com isso, é necessário conhecer diversas ferramentas e estar sempre se atualizando.
+
+O que você achou do artigo? Alguma ferramenta que você utiliza não está na lista? Deixe seu comentário!
