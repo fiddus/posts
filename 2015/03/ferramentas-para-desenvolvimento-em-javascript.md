@@ -176,10 +176,12 @@ Gerenciar as dependências no *front-end* não é tão simples como no *back-end
 
 Para ter estas funcionalidades no *front-end* existe o [Bower](http://bower.io/), um gerenciador de dependências para o browser. Com ele é bastante simples adicionar dependências ao projeto, bastando executar:
 
+<!-- sh -->
     $ bower install <nome da dependência>
 
 Para instalar o angular, por exemplo, basta rodar:
 
+<!-- sh -->
     $ bower install angular --save
 
 O comando `--save` utilizado acima salva as dependências instaladas em um arquivo de configurações, o `bower.json`.
