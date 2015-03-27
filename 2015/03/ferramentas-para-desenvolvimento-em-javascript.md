@@ -12,20 +12,26 @@ Junto com o node vem o [npm](https://www.nodejs.com), um excelente gerenciador d
 
 ## nvm
 
-O desenvolvimento do node tem sido bastante rápido, com atualizações frequentes de versão. Para evitar que uma aplicação apresente falhas provenientes de imcompatibilidade de versões, recomenda-se a utilização do [nvm](https://github.com/creationix/nvm), o Node Version Manager. Desta forma, não é necessário instalar o node diretamente.
+O desenvolvimento do node tem sido bastante rápido, com atualizações frequentes de versão. Para evitar que uma aplicação apresente falhas provenientes de incompatibilidade de versões, recomenda-se a utilização do [nvm](https://github.com/creationix/nvm), o Node Version Manager. Desta forma, não é necessário instalar o node diretamente.
 
 Após a instalação do nvm, conforme descrito em seu repositório no GitHub, para utilizar uma versão específica do node, basta executar:
 
     $ nvm install 0.10
+
+https://gist.github.com/vinicius0026/89951f82624a752f1acf
 
 Isto irá instalar a versão mais atual do node 0.10, o que provavelmente evitará quebra de API. Para verificar a versão do node e do npm utilizadas no momento, execute:
 
     $ node --version
     $ npm --version
 
+https://gist.github.com/vinicius0026/4454133b6b51e83a53af
+
 As ferramentas listadas abaixo estão todas disponíveis no npm. Para instalá-las, a menos que instruções específicas sejam mostradas, basta executar:
 
     $ npm install <nome do pacote>
+
+https://gist.github.com/vinicius0026/39e160b00c96b71afc91
 
 ---
 
@@ -34,6 +40,20 @@ As ferramentas listadas abaixo estão todas disponíveis no npm. Para instalá-l
 ### Grunt
 
 O [Grunt](http://gruntjs.com) é um *task runner*, escrito em node. Ou seja, através de um *script* de configuração, é possível definir várias tarefas a serem executadas automaticamente. Com isto, podemos automatizar diversos processos, como testes, *build*, *linting*, entre outros.
+
+O Grunt é composto por dois pacotes, o `grunt-cli`, que é o pacote para fornecer as funcionalidades da linha de comando, e o `grunt`, que é o módulo do grunt instalado em cada projeto.
+
+É comum instalar o `grunt-cli` de forma global, fazendo com que esta ferramenta esteja disponível em todos os diretórios. Para isso, basta executar:
+
+    $ npm install -g grunt-cli
+
+https://gist.github.com/vinicius0026/01ae32ece497f0a4b4ed
+
+Para um projeto específico, instala-se o `grunt` com o comando padrão, ou seja
+
+	$ npm install grunt
+
+https://gist.github.com/vinicius0026/ebcf3136c1b6cb333eae
 
 Em breve publicaremos um post detalhado sobre a utilização e configuração do Grunt.
 
@@ -84,7 +104,7 @@ Ao contrário do vim, o [Sublime](http://www.sublimetext.com/) tem uma interface
 
 ### WebStorm
 
-O [WebStorm](https://www.jetbrains.com/webstorm/) não é um simples editor, mas uma IDE completa para desenvolvimento em JavaScript. Conta com diversas funcionalidades como autocomplete, sugestão de código, *linting*, execução de *tasks* do Grunt, entre outras.
+O [WebStorm](https://www.jetbrains.com/webstorm/) não é um simples editor, mas uma IDE completa para desenvolvimento em JavaScript. Conta com diversas funcionalidades como autocomplete, sugestão de código, *linting*, execução de *tasks* do Grunt, integração com MongoDB, entre outras.
 
 O ponto em que o WebStorm realmente mostra seu valor é para realizar *debug*. Tanto para *front-end* como para *back-end*, a ferramenta de *debug* do WebStorm é bastante completa e customizável.
 
@@ -115,7 +135,7 @@ Utilizando estas ferramentas, o código de teste fica estruturado de maneira sim
     var request = require('supertest'),
         expect = ('chai').expect,
         app = require('../app'), //App do express
-        thing = require('./thing); //Módulo sendo testado
+        thing = require('./thing'); //Módulo sendo testado
     
     describe('Teste sem usar supertest', function () {
         it ('should return array when call something on thing', function (done) {
@@ -136,7 +156,9 @@ Utilizando estas ferramentas, o código de teste fica estruturado de maneira sim
         });
     });
 
-Em breve postaremos um artigo completo sobre teste e TDD no *back-end*.
+https://gist.github.com/vinicius0026/0fbaff3894913380c344
+
+Em breve postaremos um artigo completo sobre testes e TDD no *back-end*.
 
 ### mongoose
 
@@ -156,9 +178,9 @@ Com o passaport, é bastante simples implementar esquemas de login utilizando in
 
 ### Angular
 
-[Angular](https://angularjs.org/) é um *frame-work* para desenvolvimento *front-end* desenvolvido pelo Google. O Angular facilita muito a criação de aplicações dinâmicas e Single Page Applications.
+[Angular](https://angularjs.org/) é um *frame-work* para desenvolvimento *front-end* criado pelo Google. O Angular facilita muito a criação de aplicações dinâmicas e Single Page Applications.
 
-Com Angular é possível extender o HTML, criando *tags* personalizadas para encapsular funcionalidades.
+Com Angular é possível extender o HTML, criando *tags* personalizadas - conhecidas como diretivas - para encapsular funcionalidades.
 
 O Angular foi desenvolvido de forma a ser completamente testável, utilizando bastante Injeção de Dependência e provendo mocks para a realização dos testes.
 
@@ -179,21 +201,25 @@ Para ter estas funcionalidades no *front-end* existe o [Bower](http://bower.io/)
 <!-- sh -->
     $ bower install <nome da dependência>
 
+https://gist.github.com/vinicius0026/00b942f0ed29772adf10
+
 Para instalar o angular, por exemplo, basta rodar:
 
 <!-- sh -->
     $ bower install angular --save
+
+https://gist.github.com/vinicius0026/ebea113e01cad85aae5e
 
 O comando `--save` utilizado acima salva as dependências instaladas em um arquivo de configurações, o `bower.json`.
 
 
 ### Karma
 
-Para rodar os testes unitários no front-end, utilizamos o [Karma](http://karma-runner.github.io/). Karma é um *runner* de testes que roda nos navegadores configurados. O Karma não depende de algum framework de testes específico, podendo ser utilizado com diversos deles, como mocha, sinon, Jasmine, QUnit, etc.
+Para rodar os testes unitários no front-end, utilizamos o [Karma](http://karma-runner.github.io/). Karma é um *runner* de testes que roda nos navegadores configurados. O Karma não depende de framework de testes específico, podendo ser utilizado com diversos deles, como mocha, sinon, Jasmine, QUnit, etc.
 
 ### Protractor
 
-[Protractor](http://angular.github.io/protractor/#/) é um framework para testes End-to-end no Angular. Este framework permite rodar os testes da aplicação em navagadores reais, emulando a interação que um usuário real teria com o sistema.
+[Protractor](http://angular.github.io/protractor/) é um *framework* para testes *end-to-end* no Angular. Este *framework* permite rodar os testes da aplicação nos navagadores, emulando a interação que um usuário real teria com o sistema.
 
 ### Tasks do Grunt para build
 
