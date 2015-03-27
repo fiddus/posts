@@ -1,6 +1,6 @@
 Aqui na Fiddus, nós utilizamos JavaScript todos os dias. Seja para criar experiências envolventes no front-end, para programar nossos servidores com Node.js ou para comunicar com o banco de dados (com MongoDB ou CouchDB, entre outros), nós acreditamos que esta linguagem é muito poderosa se bem utilizada.
 
-É claro que não somos fluentes apenas em JavaScript. Gostamos bastante de Python, estamos começando a aprender Ruby, e temos no nosso currículo passagens por Java, PHP e C++. Acreditamos que é fundamental conhecer diversas linguagens e paradigmas. Mas a utilização da mesma linguagem tanto no front-end como no back-end facilita nosso dia a dia e permite que tenhamos um conhecimento bastante aprofundado sobre ela. Para nós, esta linguagem é o JavaScript.
+É claro que não somos fluentes apenas em JavaScript. Gostamos bastante de Python, estamos inciando a jornada com Ruby, e temos no nosso currículo passagens por Java, PHP e C++. Acreditamos que é fundamental conhecer diversas linguagens e paradigmas. Mas a utilização da mesma linguagem tanto no front-end como no back-end facilita nosso dia a dia e permite que tenhamos um conhecimento bastante aprofundado sobre ela. Para nós, esta linguagem é o JavaScript.
 
 Neste post, vamos apresentar algumas ferramentas que utilizamos para desenvolvimento de sistemas com JavaScript, tanto no navegador como no servidor. Confira abaixo e deixe seu comentário.
 
@@ -16,7 +16,7 @@ O desenvolvimento do node tem sido bastante rápido, com atualizações frequent
 
 Após a instalação do nvm, conforme descrito em seu repositório no GitHub, para utilizar uma versão específica do node, basta executar:
 
-    $ nvm install 0.10
+    $ nvm install stable
 
 https://gist.github.com/vinicius0026/89951f82624a752f1acf
 
@@ -143,7 +143,7 @@ Utilizando estas ferramentas, o código de teste fica estruturado de maneira sim
         });
         
         it ('something else ...', function (done) {
-            expect(true).to.be(true);
+            expect(true).to.be.true;
         });
     });
     
