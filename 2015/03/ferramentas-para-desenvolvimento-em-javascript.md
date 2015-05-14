@@ -20,7 +20,7 @@ Após a instalação do nvm, conforme descrito em seu repositório no GitHub, pa
 
 https://gist.github.com/vinicius0026/89951f82624a752f1acf
 
-Isto irá instalar a versão mais atual do node 0.10, o que provavelmente evitará quebra de API. Para verificar a versão do node e do npm utilizadas no momento, execute:
+Isto irá instalar a versão estável mais atual do node, o que provavelmente evitará quebra de API. Para verificar a versão do node e do npm utilizadas no momento, execute:
 
     $ node --version
     $ npm --version
@@ -178,11 +178,11 @@ Com o passaport, é bastante simples implementar esquemas de login utilizando in
 
 ### Angular
 
-[Angular](https://angularjs.org/) é um *frame-work* para desenvolvimento *front-end* criado pelo Google. O Angular facilita muito a criação de aplicações dinâmicas e Single Page Applications.
+[Angular](https://angularjs.org/) é um *framework* para desenvolvimento *front-end* criado pelo Google. O Angular facilita muito a criação de aplicações dinâmicas e Single Page Applications.
 
 Com Angular é possível extender o HTML, criando *tags* personalizadas - conhecidas como diretivas - para encapsular funcionalidades.
 
-O Angular foi desenvolvido de forma a ser completamente testável, utilizando bastante Injeção de Dependência e provendo mocks para a realização dos testes.
+O Angular foi desenvolvido de forma a ser completamente testável, utilizando bastante os padrões de Injeção de Dependência e provendo mocks para a realização de testes.
 
 ### Stylus
 
@@ -225,7 +225,7 @@ Para rodar os testes unitários no front-end, utilizamos o [Karma](http://karma-
 
 Para realizar o *build* da nossa aplicação *front-end* utilizamos diversos pacotes do Grunt. Os mais relevantes estão listados abaixo:
 
-* **[grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)**: Exclui os arquivos e ou diretórios especificados
+* **[grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)**: Exclui os arquivos e/ou diretórios especificados
 * **[grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)**: Copia arquivos de um diretório para outro.
 * **[grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)**: Concatena os arquivos escolhidos. Utilizado para diminuir o número de arquivos de javascript ou css.
 * **[grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin)**: Minifica arquivos HTML.
@@ -239,6 +239,6 @@ Para realizar o *build* da nossa aplicação *front-end* utilizamos diversos pac
 
 ## Quais ferramentas você utiliza?
 
-Desenvolver sistemas profissionais não é tarefa fácil. Poder contar com uma comunidade open-source muito ativa facilita muito a vida dos desenvolvedores, já que existem diversas ferramentas para realizar tarefas comuns. A comunidade open-source que existe ao redor de JavaScript e, especificamente, node, é bastante grande e muito dinâmica. Com isso, é necessário conhecer diversas ferramentas e se atualizar sempre.
+Desenvolver sistemas profissionais não é tarefa fácil. Poder contar com uma comunidade open-source muito ativa facilita muito a vida dos desenvolvedores, já que existem diversas ferramentas para realizar tarefas comuns. A comunidade open-source que existe ao redor de JavaScript e, especificamente, do node, é bastante grande e muito dinâmica. Com isso, é necessário conhecer diversas ferramentas e se atualizar sempre.
 
 O que você achou do artigo? Alguma ferramenta que você utiliza não está na lista? Deixe seu comentário!
