@@ -1,4 +1,4 @@
-# Aventuras com Grunt
+# Primeiros Passos com o Grunt
 
 Muitas vezes ao iniciar um novo projeto *front-end* uma da opções seria utilizar um *generator* como o [Yeoman](http://yeoman.io/), [Slush](http://gruntjs.com/) entre outros. Com o Yeoman vem junto no pacote o [Grunt](http://gruntjs.com/) como gerenciador de tarefas, possibilitando utilizar o [Gulp](http://gulpjs.com/) também, já o Slush utiliza o somente o Gulp.
 
