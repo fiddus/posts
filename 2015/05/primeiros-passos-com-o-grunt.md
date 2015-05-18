@@ -23,12 +23,11 @@ $ npm --version
 
 ## Iniciando os Primeiros Arquivos
 
-Todo projeto *front-end* precisa de arquivos iniciais, para este vamos iniciar com um básico de com uma *index.html*, [*normalize.css*](http://necolas.github.io/normalize.css/). Portanto nossa estrutura básica de arquivos estaria abaixo
+Todo projeto *front-end* precisa de arquivos iniciais, para este vamos iniciar com um básico de com uma página HTML, uma de JavaScript e outra de CSS. Portanto nossa estrutura básica de arquivos estaria abaixo
 
 ```text
 grunt-project
     |-- css
-    |    |-- normalize.css
     |    |-- styles.css
     |
     |-- js
@@ -40,15 +39,15 @@ grunt-project
 
 O conteúdo dos arquivos não é de tamanha importância para esta explicação, fique a vontade para alterar da maneira que desejar.
 
-## Iniciando com NodeJS
+## Iniciando as Configurações
 
-Para começar a codificar com node precisamos instalar a interface de linha de comando do node, esta nos ajudará na instalação e remoção de pacotes para realizarmos algumas tarefas corriqueiras de desenvolvimento
+Para começar a trabalhar com o Grunt, precisamos da ajuda do Node para instalar a interface de linha de comando do Grunt, esta nos ajudará na execução das tarefas 
 
 ```shell
 $ npm install -g grunt-cli
 ```
 
-O argumento `-g` quer dizer que este pacote será instalado globalmente no seu sistema. Os pacotes que não utilizam este argumento serão instalado no escopo do projeto.
+O argumento `-g` quer dizer que este pacote será instalado globalmente no seu sistema. Os pacotes que não utilizam este argumento serão instalado no escopo do projeto, dentro de um diretório chamado `node_modules`.
 
 Feito isso agora conseguiremos iniciar um projeto simplesmente pelo comando
 
@@ -56,7 +55,7 @@ Feito isso agora conseguiremos iniciar um projeto simplesmente pelo comando
 $ npm init
 ```
 
-Este comando vai fazer algumas perguntas (*name*, *version*, *description*, *entry point*, *test*, *git repository*, *keywords*, *authors*, *licence*) para setar algumas configurações e gerar um arquivo `package.json` na raiz do projeto.
+Este comando vai fazer algumas perguntas (*name*, *version*, *description*, *entry point*, *test*, *git repository*, *keywords*, *authors*, *licence* entre outros) para setar algumas configurações e gerar um arquivo `package.json` na raiz do projeto.
 
 ```json
 {
@@ -76,7 +75,7 @@ Este comando vai fazer algumas perguntas (*name*, *version*, *description*, *ent
 }
 ```
 
-Ao final já podemos começar a brincar um pouco com os pacotes NPM. O NPM possui configurações no `package.json`: uma de *dependencies*, *devDependencies*, *peerDependencies* para efeito deste *post* utilizaremos somente o *devDependencies*.
+Ao final já podemos começar a brincar um pouco com os pacotes NPM. Há alguma diferenças nas configurações no `package.json`: uma de *dependencies*, *devDependencies*, *peerDependencies* para efeito deste *post* utilizaremos somente o *devDependencies*.
 
 
 
@@ -95,7 +94,7 @@ module.exports = function (grunt) {
         
 ### Gerenciador Grunt
         
-O `Grunt` é um gerenciador de tarefas utilizado para fazer automatização de tarefas repetitivas que normalmente tomam o preciso tempo de desenvolvimento, para isso o Grunt vem ajudar a automatizá-las
+O `Grunt` é um gerenciador de tarefas utilizado para fazer automatização de tarefas repetitivas que normalmente tomam o preociso tempo de desenvolvimento, para isso o Grunt vem ajudar a automatizá-las
 
 ```shell
 $ npm install grunt --save-dev  
@@ -138,7 +137,7 @@ Isso vai adicionar outra dependência no seu arquivo `package.json`
 }
 ```
 
-Com isso podemos escrever nossa *task*
+E já estamos aptos a escrever nossa *task*
 
 ```javascript
 module.exports = function (grunt) {
@@ -244,13 +243,11 @@ Legal, até agora só executamos uma única tarefa por vez, que tal agrupá-las 
 
 ```javascript
 module.exports = function (grunt) {
-    // load npm tasks
-    // ...
+    // Load npm tasks
     
-    grunt.initConfig({
-        // ...
-    });
-    
+    // Task configurations
+
+    // Registered tasks
     grunt.registerTask('build', [
         'clean',
         'jshint',
@@ -265,7 +262,7 @@ Vamos fazer um teste agora
 $ grunt build
 ```
 
-E o Grunt vai executar as tarefas na sequência do array, livrando você de ter que fazê-las manualmente, e mostrar o resultado delas no seu console
+E o Grunt vai executar as três tarefas na sequência do array, livrando você de ter que fazê-las manualmente, e mostrar o resultado delas no seu console
 
 ### Connect and Live Reload
 
@@ -301,7 +298,7 @@ connect: {
 
 Esta task só fica rodando enquanto o Grunt está rodando, quando este para, a tarefa também para. Um meio de fazer a sequência disso é utilizar o próximo *plugin*. Vamos a ele.
 
-Este *plugin* que faremos a configuração para ajuda a ficar observando alterações nos arquivos e executar algumas tarefas específicas a cada alteração
+Com este *plugin* faremos a configuração que ficará observando alterações nos arquivos e executar algumas tarefas específicas a cada alteração
 
 ```shell
 $ npm install grunt-contrib-watch --save-dev
@@ -368,7 +365,7 @@ $ grunt serve
 
 Teremos todas as tarefas executadas sequencialmente de forma automatizada e sem a necessidade de execução uma a uma.
 
-Note que com este comando o console ficará esperando, e ao alterar um arquivo do projeto e salvá-lo ele informará qual arquivo foi alterado e executará as subtarefas que estão configuradas para as subtarefas que estão no *watch*.
+Note que com este comando o console ficará esperando, e ao alterar um arquivo do projeto e salvá-lo ele informará qual arquivo foi alterado e executará as subtarefas que estão configuradas dentro das subtarefas que estão no *watch*.
 
 # Concluindo
 
@@ -378,7 +375,9 @@ Este artigo foi mais didático para mostrar os primeiros passos de uma das ótim
 
 Nos próximos posts mostraremos como incrementar o `Gruntfile.js` trazendo mais algumas tarefas úteis para o desenvolvimento de projetos *front-end*.
 
-Até lá.
+O código para este projeto encontra-se no [Repositório Blog Grunt Project](https://github.com/fiddus/blog-grunt-project). Se ficou com alguma dúvida na organização do código, confira lá.
+
+Até a próxima.
 
 
 # Referências
